@@ -6,7 +6,10 @@
         "paths": {
             "@/": ["./"],
             "@routes": ["routes"],
-            "@layout": ["layout"]
+            "@layout": ["layout"],
+            "@pages": ["pages"],
+            "@constants": ["constants"],
+            "@ui": ["ui"]
         }
     }
 }
