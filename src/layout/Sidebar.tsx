@@ -13,7 +13,7 @@ const Sidebar = () => {
 
     useEffect(() => {
         setIsSidebarOpen(!isMobile);
-    });
+    }, [isMobile]);
 
     const renderNavigationLinks = () => {
         return (
@@ -25,22 +25,20 @@ const Sidebar = () => {
                         className='flex items-center font-medium p-4 mb-2 text-sm rounded-lg hover:bg-gray-700 transition-colors duration-300'
                         aria-label={`Navigate to ${item.href}`}
                     >
-                        <motion.div className='flex items-center '>
-                            <item.icon size={20} style={{ color: item.color, minWidth: '20px' }} />
-                            <AnimatePresence>
-                                {isSidebarOpen && (
-                                    <motion.span
-                                        className='ml-4 text-nowrap'
-                                        initial={{ opacity: 0, width: 0 }}
-                                        animate={{ opacity: 1, width: 'auto' }}
-                                        exit={{ opacity: 0, width: 0 }}
-                                        transition={{ duration: 0.2, delay: 0.3 }}
-                                    >
-                                        {item.name}
-                                    </motion.span>
-                                )}
-                            </AnimatePresence>
-                        </motion.div>
+                        <item.icon size={20} style={{ color: item.color, minWidth: '20px' }} />
+                        <AnimatePresence>
+                            {isSidebarOpen && (
+                                <motion.span
+                                    className='ml-4 text-nowrap'
+                                    initial={{ opacity: 0, width: 0 }}
+                                    animate={{ opacity: 1, width: 'auto' }}
+                                    exit={{ opacity: 0, width: 0 }}
+                                    transition={{ duration: 0.2, delay: 0.3 }}
+                                >
+                                    {item.name}
+                                </motion.span>
+                            )}
+                        </AnimatePresence>
                     </Link>
                 ))}
             </nav>

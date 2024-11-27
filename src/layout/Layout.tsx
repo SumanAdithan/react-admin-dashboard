@@ -1,4 +1,4 @@
-import { Main, Navbar, Sidebar } from '@layout';
+import { Main, Header, Sidebar } from '@layout';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
@@ -10,8 +10,8 @@ const Layout = () => {
                 <div className='absolute inset-0 backdrop-blur-3xl' />
             </div>
             <Sidebar />
-            <div className='z-20'>
-                <Navbar />
+            <div className='flex-1 z-20'>
+                <Header />
                 <Main>
                     <Outlet />
                 </Main>

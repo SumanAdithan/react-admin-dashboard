@@ -1,6 +1,22 @@
-import { BarChart2, DollarSign, Settings, ShoppingBag, ShoppingCart, TrendingUp, Users } from 'lucide-react';
+import {
+    BarChart2,
+    DollarSign,
+    LucideIcon,
+    Settings,
+    ShoppingBag,
+    ShoppingCart,
+    TrendingUp,
+    Users,
+} from 'lucide-react';
 
-export const SIDEBAR_ITEMS = [
+interface SidebarItems {
+    name: string;
+    icon: LucideIcon;
+    color: string;
+    href: string;
+}
+
+export const SIDEBAR_ITEMS: SidebarItems[] = [
     { name: 'Overview', icon: BarChart2, color: '#6366f1', href: '/' },
     { name: 'Products', icon: ShoppingBag, color: '#8B5CF6', href: '/products' },
     { name: 'Users', icon: Users, color: '#EC4899', href: '/users' },
