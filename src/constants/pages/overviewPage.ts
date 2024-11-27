@@ -26,3 +26,18 @@ export const OVERVIEW_STAT = [
         color: '#10b981',
     },
 ];
+
+export const SALES_DATA = [
+    { name: 'Aug', sales: 3000 },
+    { name: 'Sep', sales: 3700 },
+    { name: 'Oct', sales: 5200 },
+    { name: 'Nov', sales: 4600 },
+    { name: 'Dec', sales: 5400 },
+    { name: 'Jan', sales: 7300 },
+    { name: 'Feb', sales: 6100 },
+    { name: 'Mar', sales: 5600 },
+    { name: 'Apr', sales: 6600 },
+    { name: 'May', sales: 6200 },
+    { name: 'Jun', sales: 7100 },
+    { name: 'Jul', sales: 7700 },
+];
