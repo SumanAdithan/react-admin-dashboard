@@ -5,7 +5,7 @@ interface MainProps {
 }
 
 const Main = ({ children }: MainProps) => {
-    return <main>{children}</main>;
+    return <main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>{children}</main>;
 };
 
 export default Main;

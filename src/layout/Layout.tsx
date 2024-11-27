@@ -10,7 +10,7 @@ const Layout = () => {
                 <div className='absolute inset-0 backdrop-blur-3xl' />
             </div>
             <Sidebar />
-            <div className='flex-1 z-20'>
+            <div className='flex-1 z-20 overflow-auto relative bg-gray-900'>
                 <Header />
                 <Main>
                     <Outlet />

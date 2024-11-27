@@ -9,7 +9,8 @@
             "@layout": ["layout"],
             "@pages": ["pages"],
             "@constants": ["constants"],
-            "@ui": ["ui"]
+            "@ui": ["ui"],
+            "@components": ["components"]
         }
     }
 }
