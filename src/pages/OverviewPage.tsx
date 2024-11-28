@@ -1,4 +1,4 @@
-import { SalesOverviewChart, StatCard } from '@components';
+import { CategoryDistributionChart, SalesChannelChart, SalesOverviewChart, StatCard } from '@components';
 import { OVERVIEW_STAT } from '@constants';
 import { SlideUp } from '@ui';
 
@@ -12,6 +12,8 @@ const OverviewPage = () => {
             </SlideUp>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                 <SalesOverviewChart />
+                <CategoryDistributionChart />
+                <SalesChannelChart />
             </div>
         </>
     );

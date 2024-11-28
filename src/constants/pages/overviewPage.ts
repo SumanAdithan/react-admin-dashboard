@@ -41,3 +41,25 @@ export const SALES_DATA = [
     { name: 'Jun', sales: 7100 },
     { name: 'Jul', sales: 7700 },
 ];
+
+export const CATEGORY_DATA = [
+    { name: 'Electronics', value: 4500 },
+    { name: 'Clothing', value: 3200 },
+    { name: 'Home & Garden', value: 2800 },
+    { name: 'Books', value: 2100 },
+    { name: 'Sports & Outdoors', value: 1800 },
+];
+
+export const CATEGORY_DATA_COLORS = ['#6366f1', '#6b8afa', '#ec4899', '#10b981', '#f59e0b'];
+
+export const SALES_CHANNEL_DATA = [
+    { name: 'Website', value: 53000 },
+    { name: 'Mobile App', value: 38200 },
+    { name: 'Marketplace', value: 17000 },
+    { name: 'Social Media', value: 28700 },
+    { name: 'Email Marketing', value: 50000 },
+    { name: 'Affiliate Marketing', value: 35000 },
+    { name: 'Direct Sales', value: 25000 },
+];
+
+export const SALES_CHANNEL_DATA_COLORS = ['#6366f1', '#8B5CF6', '#EC4899', '#10B981', '#F59E0B', '#3B82F6', '#6EE7B7'];
