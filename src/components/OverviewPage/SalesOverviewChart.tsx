@@ -1,6 +1,41 @@
 import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Line, Tooltip } from 'recharts';
 import { SlideUp } from '@ui';
 import { SALES_DATA } from '@constants';
+import { CustomLineChart } from '@charts';
+
+const lineChartProps = {
+    data: SALES_DATA,
+    strokeDashArray: '3 3',
+    dataKeys: ['name', 'sales'],
+    strokes: {
+        cartesianGridStroke: '#4b5563',
+        xAxisStroke: '#9ca3af',
+        yAxisStroke: '#9ca3af',
+    },
+    tooltip: {
+        active: true,
+        contentStyle: {
+            backgroundColor: 'rgba(31, 45, 55, 0.8)',
+            borderColor: '#4b5563',
+        },
+        itemStyle: { color: '#e5e7eb' },
+    },
+    line: {
+        type: 'monotone' as 'monotone',
+        stroke: '#6366f1',
+        strokeWidth: 3,
+        dot: {
+            fill: '#6366f1',
+            strokeWidth: 2,
+            r: 5,
+        },
+        activeDot: {
+            r: 8,
+            strokeWidth: 2,
+        },
+    },
+    legend: false,
+};
 
 const SalesOverviewChart = () => {
     return (
@@ -12,28 +47,7 @@ const SalesOverviewChart = () => {
         >
             <h2 className='text-lg font-medium mb-4 text-gray-100'>Sales Overview</h2>
             <div className='h-80'>
-                <ResponsiveContainer width={'100%'} height={'100%'}>
-                    <LineChart data={SALES_DATA}>
-                        <CartesianGrid strokeDasharray={'3 3'} stroke='#4b5563' />
-                        <XAxis dataKey={'name'} stroke='#9ca3af' />
-                        <YAxis stroke='#9ca3af' />
-                        <Tooltip
-                            contentStyle={{
-                                backgroundColor: 'rgba(31, 45, 55, 0.8)',
-                                borderColor: '#4b5563',
-                            }}
-                            itemStyle={{ color: '#e5e7eb' }}
-                        />
-                        <Line
-                            type='monotone'
-                            dataKey={'sales'}
-                            stroke={'#6366f1'}
-                            strokeWidth={3}
-                            dot={{ fill: '#6366f1', strokeWidth: 2, r: 5 }}
-                            activeDot={{ r: 8, strokeWidth: 2 }}
-                        />
-                    </LineChart>
-                </ResponsiveContainer>
+                <CustomLineChart {...lineChartProps} />
             </div>
         </SlideUp>
     );

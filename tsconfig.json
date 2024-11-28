@@ -10,7 +10,8 @@
             "@pages": ["pages"],
             "@constants": ["constants"],
             "@ui": ["ui"],
-            "@components": ["components"]
+            "@components": ["components"],
+            "@charts": ["charts"]
         }
     }
 }

@@ -1,6 +1,31 @@
+import { CustomBarChart } from '@charts';
 import { SALES_CHANNEL_DATA, SALES_CHANNEL_DATA_COLORS as COLORS } from '@constants';
 import { SlideUp } from '@ui';
-import { Bar, BarChart, CartesianGrid, Cell, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { color } from 'framer-motion';
+
+const barChartProps = {
+    data: SALES_CHANNEL_DATA,
+    strokeDashArray: '3 3',
+    dataKeys: ['name', 'value'],
+    strokes: {
+        cartesianGridStroke: '#4b5563',
+        xAxisStroke: '#9ca3af',
+        yAxisStroke: '#9ca3af',
+    },
+    bar: {
+        fill: '#8884d8',
+    },
+    tooltip: {
+        active: true,
+        contentStyle: {
+            backgroundColor: 'rgba(31, 45, 55, 0.8)',
+            borderColor: '#4b5563',
+        },
+        itemStyle: { color: '#e5e7eb' },
+    },
+    colors: COLORS,
+    legend: true,
+};
 
 const SalesChannelChart = () => {
     return (
@@ -12,26 +37,7 @@ const SalesChannelChart = () => {
         >
             <h2 className='text-lg font-medium mb-4 text-gray-100'>Sales By Channel</h2>
             <div className='h-80'>
-                <ResponsiveContainer width={'100%'} height={'100%'}>
-                    <BarChart data={SALES_CHANNEL_DATA}>
-                        <CartesianGrid strokeDasharray='3 3' stroke='#4b5563' />
-                        <XAxis dataKey='name' stroke='#9ca3af' />
-                        <YAxis stroke='#9ca3af' />
-                        <Bar dataKey={'value'} fill='#8884d8'>
-                            {SALES_CHANNEL_DATA.map((_, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                            ))}
-                        </Bar>
-                        <Tooltip
-                            contentStyle={{
-                                backgroundColor: 'rgba(31, 41, 55, 0.8)',
-                                borderColor: '#4b5563',
-                            }}
-                            itemStyle={{ color: '#e5e7eb' }}
-                        />
-                        <Legend />
-                    </BarChart>
-                </ResponsiveContainer>
+                <CustomBarChart {...barChartProps} />
             </div>
         </SlideUp>
     );

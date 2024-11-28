@@ -14,11 +14,12 @@ export default defineConfig({
             '@constants': resolve(__dirname, 'src/constants'),
             '@ui': resolve(__dirname, 'src/ui'),
             '@components': resolve(__dirname, 'src/components'),
+            '@charts': resolve(__dirname, 'src/charts'),
         },
     },
     server: {
-        host: '0.0.0.0', // Allow access from the LAN
-        port: 5173, // Optional: Specify a custom port
+        host: '0.0.0.0',
+        port: 5173,
     },
     plugins: [react(), tsconfigPaths()],
 });

@@ -28,18 +28,18 @@ export const OVERVIEW_STAT = [
 ];
 
 export const SALES_DATA = [
-    { name: 'Aug', sales: 3000 },
-    { name: 'Sep', sales: 3700 },
-    { name: 'Oct', sales: 5200 },
-    { name: 'Nov', sales: 4600 },
-    { name: 'Dec', sales: 5400 },
-    { name: 'Jan', sales: 7300 },
-    { name: 'Feb', sales: 6100 },
-    { name: 'Mar', sales: 5600 },
-    { name: 'Apr', sales: 6600 },
-    { name: 'May', sales: 6200 },
-    { name: 'Jun', sales: 7100 },
-    { name: 'Jul', sales: 7700 },
+    { name: 'Jul', sales: 4200 },
+    { name: 'Aug', sales: 3800 },
+    { name: 'Sep', sales: 5100 },
+    { name: 'Oct', sales: 4600 },
+    { name: 'Nov', sales: 5400 },
+    { name: 'Dec', sales: 7200 },
+    { name: 'Jan', sales: 6100 },
+    { name: 'Feb', sales: 5900 },
+    { name: 'Mar', sales: 6800 },
+    { name: 'Apr', sales: 6300 },
+    { name: 'May', sales: 7100 },
+    { name: 'Jun', sales: 7500 },
 ];
 
 export const CATEGORY_DATA = [
@@ -47,19 +47,16 @@ export const CATEGORY_DATA = [
     { name: 'Clothing', value: 3200 },
     { name: 'Home & Garden', value: 2800 },
     { name: 'Books', value: 2100 },
-    { name: 'Sports & Outdoors', value: 1800 },
+    { name: 'Sports & Outdoors', value: 1900 },
 ];
 
-export const CATEGORY_DATA_COLORS = ['#6366f1', '#6b8afa', '#ec4899', '#10b981', '#f59e0b'];
+export const CATEGORY_DATA_COLORS = ['#6366f1', '#8B5CF6', '#ec4899', '#10b981', '#f59e0b'];
 
 export const SALES_CHANNEL_DATA = [
-    { name: 'Website', value: 53000 },
+    { name: 'Website', value: 45600 },
     { name: 'Mobile App', value: 38200 },
-    { name: 'Marketplace', value: 17000 },
-    { name: 'Social Media', value: 28700 },
-    { name: 'Email Marketing', value: 50000 },
-    { name: 'Affiliate Marketing', value: 35000 },
-    { name: 'Direct Sales', value: 25000 },
+    { name: 'Marketplace', value: 29800 },
+    { name: 'Social Media', value: 18700 },
 ];
 
-export const SALES_CHANNEL_DATA_COLORS = ['#6366f1', '#8B5CF6', '#EC4899', '#10B981', '#F59E0B', '#3B82F6', '#6EE7B7'];
+export const SALES_CHANNEL_DATA_COLORS = ['#6366F1', '#8B5CF6', '#EC4899', '#10B981', '#F59E0B'];
