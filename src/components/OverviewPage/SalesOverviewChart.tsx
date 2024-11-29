@@ -1,4 +1,3 @@
-import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Line, Tooltip } from 'recharts';
 import { SlideUp } from '@ui';
 import { SALES_DATA } from '@constants';
 import { CustomLineChart } from '@charts';

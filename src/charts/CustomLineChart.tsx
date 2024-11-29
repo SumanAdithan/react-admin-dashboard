@@ -20,12 +20,12 @@ interface LineChartProps {
         type: CurveType;
         stroke: string;
         strokeWidth: number;
-        dot: {
+        dot?: {
             fill: string;
             strokeWidth: number;
             r: number;
         };
-        activeDot: {
+        activeDot?: {
             strokeWidth: number;
             r: number;
         };

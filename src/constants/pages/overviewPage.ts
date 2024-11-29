@@ -4,7 +4,7 @@ export const OVERVIEW_STAT = [
     {
         name: 'Total Sales',
         icon: Zap,
-        value: '$13,459',
+        value: '$14,459',
         color: '#6366f1',
     },
     {
