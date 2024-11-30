@@ -3,3 +3,4 @@ export { default as SalesOverviewChart } from './OverviewPage/SalesOverviewChart
 export { default as CategoryDistributionChart } from './OverviewPage/CategoryDistributionChart';
 export { default as SalesChannelChart } from './OverviewPage/SalesChannelChart';
 export { default as SalesTrendChart } from './ProductsPage/SalesTrendChart';
+export { default as ProductTable } from './ProductsPage/ProductTable/ProductTable';

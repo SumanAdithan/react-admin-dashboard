@@ -1,4 +1,4 @@
-import { CategoryDistributionChart, SalesTrendChart, StatCard } from '@components';
+import { CategoryDistributionChart, ProductTable, SalesTrendChart, StatCard } from '@components';
 import { PRODUCTS_STAT } from '@constants';
 import { SlideUp } from '@ui';
 
@@ -10,6 +10,7 @@ const ProductsPage = () => {
                     <StatCard key={index} {...stat} />
                 ))}
             </SlideUp>
+            <ProductTable />
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                 <SalesTrendChart />
                 <CategoryDistributionChart />
