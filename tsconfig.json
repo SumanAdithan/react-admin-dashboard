@@ -11,7 +11,8 @@
             "@constants": ["constants"],
             "@ui": ["ui"],
             "@components": ["components"],
-            "@charts": ["charts"]
+            "@charts": ["charts"],
+            "@hooks": ["hooks"]
         }
     }
 }

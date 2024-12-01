@@ -2,14 +2,16 @@ import { SlideUp } from '@ui';
 import { Search } from 'lucide-react';
 import { useState } from 'react';
 import { PRODUCT_TABLE_DATA } from '@constants';
-import { useTableConfig } from './utils';
 import RenderTable from './RenderTable';
+import { useTableConfig } from '@hooks';
+import { columns } from './columnConfig';
 
 const ProductTable = () => {
     const [data, setData] = useState(PRODUCT_TABLE_DATA);
     const [globalFilter, setGlobalFilter] = useState('');
+    const pageSize = 5;
 
-    const table = useTableConfig({ data, globalFilter, setGlobalFilter });
+    const table = useTableConfig({ data, columns, globalFilter, setGlobalFilter, pageSize });
 
     return (
         <SlideUp

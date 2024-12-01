@@ -1,18 +1,10 @@
 import { Product } from '@constants';
-import {
-    createColumnHelper,
-    getCoreRowModel,
-    getPaginationRowModel,
-    getFilteredRowModel,
-    useReactTable,
-} from '@tanstack/react-table';
-import { ListPlus, Edit, Trash2 } from 'lucide-react';
-import { Dispatch, SetStateAction } from 'react';
+import { createColumnHelper } from '@tanstack/react-table';
+import { Edit, ListPlus, Trash2 } from 'lucide-react';
 
 const columnHelper = createColumnHelper<Product>();
 
-// table columns config
-const columns = [
+export const columns = [
     columnHelper.accessor('name', {
         header: 'NAME',
         cell: (info) => (
@@ -57,30 +49,3 @@ const columns = [
         ),
     }),
 ];
-
-interface TableOptionsProps {
-    data: Product[];
-    globalFilter: string;
-    setGlobalFilter: Dispatch<SetStateAction<string>>;
-}
-
-export const useTableConfig = ({ data, globalFilter, setGlobalFilter }: TableOptionsProps) => {
-    return useReactTable({
-        data,
-        columns,
-        getCoreRowModel: getCoreRowModel(),
-        getPaginationRowModel: getPaginationRowModel(),
-        getFilteredRowModel: getFilteredRowModel(),
-        globalFilterFn: 'includesString',
-        onGlobalFilterChange: setGlobalFilter,
-        initialState: {
-            pagination: {
-                pageIndex: 0,
-                pageSize: 5,
-            },
-        },
-        state: {
-            globalFilter,
-        },
-    });
-};
