@@ -1,4 +1,5 @@
 import { flexRender } from '@tanstack/react-table';
+import { FadeIn } from '@ui';
 
 const RenderTable = ({ table }: any) => {
     return (
@@ -21,13 +22,13 @@ const RenderTable = ({ table }: any) => {
             </thead>
             <tbody className='divide-y divide-gray-500'>
                 {table.getRowModel().rows.map((row: any) => (
-                    <tr key={row.id}>
+                    <FadeIn key={row.id} duration={1.1} delay={0.2} element='tr'>
                         {row.getVisibleCells().map((cell: any) => (
                             <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-100' key={cell.id}>
                                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
                             </td>
                         ))}
-                    </tr>
+                    </FadeIn>
                 ))}
             </tbody>
         </table>

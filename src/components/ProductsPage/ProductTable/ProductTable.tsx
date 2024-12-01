@@ -1,5 +1,5 @@
 import { SlideUp } from '@ui';
-import { Search } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Search } from 'lucide-react';
 import { useState } from 'react';
 import { PRODUCT_TABLE_DATA } from '@constants';
 import RenderTable from './RenderTable';
@@ -26,12 +26,47 @@ const ProductTable = () => {
                     <Search className='absolute left-3 text-gray-400 sm:left-2.5 top-2.5' size={20} />
                     <input
                         type='text'
+                        value={globalFilter}
+                        onChange={(e) => setGlobalFilter(e.target.value)}
                         placeholder='Search Product...'
                         className='bg-gray-700 text-white placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 w-full sm:w-auto outline-none focus:ring-2 focus:ring-blue-500'
                     />
                 </div>
             </div>
             <RenderTable table={table} />
+            <div className='flex flex-col md:flex-row justify-between mt-4 space-x-2 items-center'>
+                <div className='flex items-center'>
+                    <button
+                        onClick={() => table.previousPage()}
+                        disabled={!table.getCanPreviousPage()}
+                        className={`text-sm px-3 py-1 border rounded-md ${
+                            !table.getCanPreviousPage()
+                                ? 'text-gray-400 border-gray-600'
+                                : 'text-gray-100 border-gray-300 hover:bg-gray-300 hover:text-gray-800'
+                        }`}
+                    >
+                        <ChevronLeft size={18} />
+                    </button>
+                    <span className='mx-2 text-sm font-medium text-gray-100'>
+                        Page {table.getState().pagination.pageIndex + 1} of {table.getPageCount()}
+                    </span>
+                    <button
+                        onClick={() => table.nextPage()}
+                        disabled={!table.getCanNextPage()}
+                        className={`text-sm px-3 py-1 border rounded-md ${
+                            !table.getCanNextPage()
+                                ? 'text-gray-400 border-gray-600'
+                                : 'text-gray-100 border-gray-300 hover:bg-gray-300 hover:text-gray-800'
+                        }`}
+                    >
+                        <ChevronRight size={18} />
+                    </button>
+                </div>
+
+                <div className='text-sm font-medium text-gray-300 tracking-wider mt-5 md:mt-0'>
+                    Total Products: {table.getRowCount()}
+                </div>
+            </div>
         </SlideUp>
     );
 };

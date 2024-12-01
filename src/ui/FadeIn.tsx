@@ -9,7 +9,7 @@ interface FadeInProps {
 }
 
 const FadeIn = ({ children, duration = 0, delay = 0, element = 'div' }: FadeInProps) => {
-    const Motion = motion.create(element, { forwardMotionProps: true });
+    const Motion = motion.create(element);
     return (
         <Motion initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration, delay }}>
             {children}
