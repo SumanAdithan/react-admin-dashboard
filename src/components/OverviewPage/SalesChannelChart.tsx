@@ -1,7 +1,6 @@
 import { CustomBarChart } from '@charts';
 import { SALES_CHANNEL_DATA, SALES_CHANNEL_DATA_COLORS as COLORS } from '@constants';
 import { SlideUp } from '@ui';
-import { color } from 'framer-motion';
 
 const barChartProps = {
     data: SALES_CHANNEL_DATA,
