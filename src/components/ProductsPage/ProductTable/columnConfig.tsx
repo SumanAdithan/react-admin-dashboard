@@ -1,6 +1,7 @@
 import { Product } from '@constants';
+import { useModalStore, useProductStore } from '@store';
 import { createColumnHelper } from '@tanstack/react-table';
-import { Edit, ListPlus, Trash2 } from 'lucide-react';
+import { Edit, Trash2 } from 'lucide-react';
 
 const columnHelper = createColumnHelper<Product>();
 
@@ -34,18 +35,23 @@ export const columns = [
     columnHelper.display({
         id: 'actions',
         header: 'ACTIONS',
-        cell: () => (
-            <div className='flex items-center gap-4 h-full'>
-                <button className='text-green-500 hover:text-green-700'>
-                    <ListPlus size={20} />
-                </button>
-                <button className='text-blue-500 hover:text-blue-700'>
-                    <Edit size={18} />
-                </button>
-                <button className='text-red-500 hover:text-red-700'>
-                    <Trash2 size={18} />
-                </button>
-            </div>
-        ),
+        cell: ({ row }) => {
+            const { openModal } = useModalStore();
+            const { removeProduct } = useProductStore();
+
+            return (
+                <div className='flex items-center gap-4 h-full'>
+                    <button
+                        className='text-blue-500 hover:text-blue-700'
+                        onClick={() => openModal('EDIT', row.original)}
+                    >
+                        <Edit size={18} />
+                    </button>
+                    <button className='text-red-500 hover:text-red-700' onClick={() => removeProduct(row.original.id)}>
+                        <Trash2 size={18} />
+                    </button>
+                </div>
+            );
+        },
     }),
 ];

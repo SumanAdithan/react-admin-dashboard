@@ -64,3 +64,36 @@ export const PRODUCT_TABLE_DATA: Product[] = [
     { id: '14', name: 'Laptop Stand', category: 'Office Supplies', price: 45.99, stock: 120, sales: 350 },
     { id: '15', name: 'Desk Lamp', category: 'Home Decor', price: 39.99, stock: 110, sales: 300 },
 ];
+
+export const PRODUCT_TABLE_INPUT_FIELDS = [
+    {
+        label: 'Product Name',
+        type: 'text',
+        placeholder: 'Product Name',
+        key: 'name',
+    },
+    {
+        label: 'Category',
+        type: 'text',
+        placeholder: 'Category',
+        key: 'category',
+    },
+    {
+        label: 'Price',
+        type: 'number',
+        placeholder: 'Price',
+        key: 'price',
+    },
+    {
+        label: 'Stock',
+        type: 'number',
+        placeholder: 'Stock',
+        key: 'stock',
+    },
+    {
+        label: 'Sales',
+        type: 'number',
+        placeholder: 'Sales',
+        key: 'sales',
+    },
+];

@@ -1,18 +1,16 @@
-import { SlideUp } from '@ui';
-import { ChevronLeft, ChevronRight, Search } from 'lucide-react';
 import { useState } from 'react';
-import { PRODUCT_TABLE_DATA } from '@constants';
-import RenderTable from './RenderTable';
+import { SlideUp } from '@ui';
+import { Search } from 'lucide-react';
 import { useTableConfig } from '@hooks';
-import { columns } from './columnConfig';
-import PageinationControls from './PageinationControls';
+import { useProductStore, useModalStore } from '@store';
+import { ProductForm, PageinationControls, columns, RenderTable } from '@components';
 
 const ProductTable = () => {
-    const [data, setData] = useState(PRODUCT_TABLE_DATA);
+    const { products } = useProductStore();
+    const { modal, openModal } = useModalStore();
     const [globalFilter, setGlobalFilter] = useState('');
-    const [modal, setModal] = useState({ active: false, for: '' });
 
-    const table = useTableConfig({ data, columns, globalFilter, setGlobalFilter, pageSize: 5 });
+    const table = useTableConfig({ data: products, columns, globalFilter, setGlobalFilter, pageSize: 5 });
 
     return (
         <SlideUp
@@ -23,7 +21,7 @@ const ProductTable = () => {
         >
             <div className='flex justify-between items-center mb-6'>
                 <h2 className='text-xl font-semibold text-gray-100'>Product List</h2>
-                <div className='relative flex items-center'>
+                <div className='relative flex items-center gap-2'>
                     <Search className='absolute left-3 text-gray-400 sm:left-2.5 top-2.5' size={20} />
                     <input
                         type='text'
@@ -32,12 +30,21 @@ const ProductTable = () => {
                         placeholder='Search Product...'
                         className='bg-gray-700 text-white placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 w-full sm:w-auto outline-none focus:ring-2 focus:ring-blue-500'
                     />
+                    <button
+                        className='text-white hover:bg-green-700 bg-green-600 py-2 px-4 rounded-lg'
+                        onClick={() => openModal('ADD')}
+                    >
+                        <h3>Add</h3>
+                    </button>
                 </div>
             </div>
-            <RenderTable table={table} />
+            <>
+                <RenderTable table={table} />
 
-            {/* Pagination Controls */}
-            <PageinationControls table={table} />
+                {/* Pagination Controls */}
+                <PageinationControls table={table} />
+            </>
+            {modal.active && <ProductForm />}
         </SlideUp>
     );
 };

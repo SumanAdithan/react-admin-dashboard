@@ -13,7 +13,8 @@
             "@components": ["components"],
             "@charts": ["charts"],
             "@hooks": ["hooks"],
-            "@store": ["store"]
+            "@store": ["store"],
+            "@utils": ["utils"]
         }
     }
 }

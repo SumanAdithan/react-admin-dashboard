@@ -17,6 +17,7 @@ export default defineConfig({
             '@charts': resolve(__dirname, 'src/charts'),
             '@hooks': resolve(__dirname, 'src/hooks'),
             '@store': resolve(__dirname, 'src/store'),
+            '@utils': resolve(__dirname, 'src/utils'),
         },
     },
     server: {

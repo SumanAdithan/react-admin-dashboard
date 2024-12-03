@@ -8,7 +8,7 @@ interface FadeInProps {
 }
 
 const ScaleIn = ({ children, duration = 0, element = 'div' }: FadeInProps) => {
-    const Motion = motion[element as keyof typeof motion] as React.ElementType<HTMLMotionProps<any>>;
+    const Motion = motion[element] as React.ElementType<HTMLMotionProps<any>>;
     return (
         <Motion
             className='bg-gray-800 rounded-lg shadow-lg p-6 max-w-xl w-full'
