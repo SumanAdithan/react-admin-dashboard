@@ -38,12 +38,8 @@ const ProductTable = () => {
                     </button>
                 </div>
             </div>
-            <>
-                <RenderTable table={table} />
-
-                {/* Pagination Controls */}
-                <PageinationControls table={table} />
-            </>
+            <RenderTable table={table} />
+            <PageinationControls table={table} name='Products' />
             {modal.active && <ProductTableForm />}
         </SlideUp>
     );

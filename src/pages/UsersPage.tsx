@@ -1,4 +1,4 @@
-import { StatCard } from '@components';
+import { StatCard, UserTable } from '@components';
 import { SlideUp } from '@ui';
 import { Users_STAT } from '@constants';
 
@@ -10,6 +10,7 @@ const UsersPage = () => {
                     <StatCard key={index} {...stat} />
                 ))}
             </SlideUp>
+            <UserTable />
         </>
     );
 };

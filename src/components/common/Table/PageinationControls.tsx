@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const PageinationControls = ({ table }: any) => {
+const PageinationControls = ({ name, table }: any) => {
     return (
         <div className='flex flex-col md:flex-row justify-between mt-4 space-x-2 items-center'>
             <div className='flex items-center'>
@@ -32,7 +32,7 @@ const PageinationControls = ({ table }: any) => {
             </div>
 
             <div className='text-sm font-medium text-gray-300 tracking-wider mt-5 md:mt-0'>
-                Total Products: {table.getRowCount()}
+                Total {name}: {table.getRowCount()}
             </div>
         </div>
     );

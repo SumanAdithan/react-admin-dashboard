@@ -23,8 +23,8 @@ const ProductTableForm = () => {
     useEffect(() => {
         let isMounted = true;
         if (modal.status === 'EDIT' && modal.data) {
-            setProduct(modal.data);
-            setInitialProduct(modal.data);
+            setProduct(modal.data as Product);
+            setInitialProduct(modal.data as Product);
         }
         return () => {
             isMounted = false;
@@ -51,12 +51,9 @@ const ProductTableForm = () => {
                     {inputFields.map((input) => (
                         <InputField
                             key={input.key}
-                            field={input.key}
-                            label={input.label}
-                            type={input.type}
                             value={product[input.key as keyof Product]}
                             setState={setProduct}
-                            placeholder={input.placeholder}
+                            data={input}
                         />
                     ))}
                     <div className='flex justify-end mt-5 space-x-2'>

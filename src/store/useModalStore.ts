@@ -1,4 +1,4 @@
-import { Product } from '@constants';
+import { Product, User } from '@constants';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
@@ -6,35 +6,19 @@ import { immer } from 'zustand/middleware/immer';
 type ModalStatus = 'ADD' | 'EDIT' | 'VIEW' | 'CLOSE';
 
 interface ModalState {
-    data?: Product;
+    data?: Product | User | null;
     active: boolean;
     status: ModalStatus;
 }
 
 interface ModalStore {
     modal: ModalState;
-    openModal: (status: ModalStatus, data?: Product) => void;
+    openModal: (status: ModalStatus, data?: Product | User) => void;
     closeModal: () => void;
 }
 
-const initialProduct: Product = {
-    id: '',
-    name: '',
-    category: '',
-    price: 0,
-    stock: 0,
-    sales: 0,
-};
-
 const initialModalState: ModalState = {
-    data: {
-        id: '',
-        name: '',
-        category: '',
-        price: 0,
-        stock: 0,
-        sales: 0,
-    },
+    data: null,
     active: false,
     status: 'CLOSE',
 };
@@ -43,7 +27,7 @@ export const useModalStore = create(
     devtools(
         immer<ModalStore>((set) => ({
             modal: initialModalState,
-            openModal: (status: ModalStatus, data = initialProduct) =>
+            openModal: (status: ModalStatus, data) =>
                 set((state) => {
                     state.modal = { data, active: true, status };
                 }),
