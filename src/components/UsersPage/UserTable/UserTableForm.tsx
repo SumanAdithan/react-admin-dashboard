@@ -45,7 +45,7 @@ const UserTableForm = () => {
         <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-40'>
             <ScaleIn duration={0.3}>
                 <h1 className='text-2xl font-semibold text=gray-100 mb-3 underline tracking-wider'>
-                    {modal.status === 'EDIT' ? 'Edit Product' : 'Add Product'}
+                    {modal.status === 'EDIT' ? 'Edit User' : 'Add User'}
                 </h1>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                     {inputFields.map((input) => (
