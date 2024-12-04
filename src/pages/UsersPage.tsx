@@ -1,4 +1,4 @@
-import { StatCard, UserTable } from '@components';
+import { StatCard, UserGrowthChart, UserTable } from '@components';
 import { SlideUp } from '@ui';
 import { Users_STAT } from '@constants';
 
@@ -11,6 +11,9 @@ const UsersPage = () => {
                 ))}
             </SlideUp>
             <UserTable />
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 pt-8'>
+                <UserGrowthChart />
+            </div>
         </>
     );
 };

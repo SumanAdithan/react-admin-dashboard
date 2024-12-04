@@ -13,6 +13,7 @@ export { default as ProductTable } from './ProductsPage/ProductTable/ProductTabl
 export { default as ProductTableForm } from './ProductsPage/ProductTable/ProductTableForm';
 export * from './ProductsPage/ProductTable/productColumnConfig';
 // usersPage
+export { default as UserGrowthChart } from './UsersPage/UserGrowthChart';
 export { default as UserTable } from './UsersPage/UserTable/UserTable';
 export { default as UserTableForm } from './UsersPage/UserTable/UserTableForm';
 export * from './UsersPage/UserTable/userColumnConfig';

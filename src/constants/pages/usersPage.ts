@@ -88,3 +88,12 @@ export const USER_TABLE_INPUT_FIELDS = [
         ],
     },
 ];
+
+export const USER_GROWTH_DATA = [
+    { name: 'Aug', users: 800 },
+    { name: 'Sep', users: 1500 },
+    { name: 'Oct', users: 1600 },
+    { name: 'Nov', users: 1950 },
+    { name: 'Dec', users: 3300 },
+    { name: 'Jan', users: 4000 },
+];
