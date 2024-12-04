@@ -5,7 +5,7 @@ export { default as CategoryDistributionChart } from './OverviewPage/CategoryDis
 export { default as SalesChannelChart } from './OverviewPage/SalesChannelChart';
 export { default as SalesTrendChart } from './ProductsPage/SalesTrendChart';
 export { default as ProductTable } from './ProductsPage/ProductTable/ProductTable';
-export { default as ProductForm } from './ProductsPage/ProductTable/ProductForm';
+export { default as ProductTableForm } from './ProductsPage/ProductTable/ProductTableForm';
 export { default as RenderTable } from './ProductsPage/ProductTable/RenderTable';
 export { default as PageinationControls } from './ProductsPage/ProductTable/PageinationControls';
-export * from './ProductsPage/ProductTable/columnConfig';
+export * from './ProductsPage/ProductTable/productColumnConfig';

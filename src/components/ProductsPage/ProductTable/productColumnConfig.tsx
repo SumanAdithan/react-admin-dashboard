@@ -5,7 +5,7 @@ import { Edit, Trash2 } from 'lucide-react';
 
 const columnHelper = createColumnHelper<Product>();
 
-export const columns = [
+export const productColumns = [
     columnHelper.accessor('name', {
         header: 'NAME',
         cell: (info) => (

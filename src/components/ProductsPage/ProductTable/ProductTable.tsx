@@ -3,7 +3,7 @@ import { SlideUp } from '@ui';
 import { Search } from 'lucide-react';
 import { useTableConfig } from '@hooks';
 import { useProductStore, useModalStore } from '@store';
-import { ProductForm, PageinationControls, columns, RenderTable } from '@components';
+import { ProductTableForm, PageinationControls, productColumns as columns, RenderTable } from '@components';
 
 const ProductTable = () => {
     const { products } = useProductStore();
@@ -44,7 +44,7 @@ const ProductTable = () => {
                 {/* Pagination Controls */}
                 <PageinationControls table={table} />
             </>
-            {modal.active && <ProductForm />}
+            {modal.active && <ProductTableForm />}
         </SlideUp>
     );
 };

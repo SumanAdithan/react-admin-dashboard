@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { InputField } from '@components';
 import { getChangedObjData } from '@utils';
 
-const ProductForm = () => {
+const ProductTableForm = () => {
     const { modal, closeModal } = useModalStore();
     const { addProduct, updateProduct } = useProductStore();
     const [product, setProduct] = useState({
@@ -79,4 +79,4 @@ const ProductForm = () => {
     );
 };
 
-export default ProductForm;
+export default ProductTableForm;
