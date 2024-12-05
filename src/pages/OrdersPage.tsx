@@ -1,4 +1,4 @@
-import { StatCard } from '@components';
+import { DailyOrdersChart, StatCard } from '@components';
 import { ORDERS_STAT } from '@constants';
 import { SlideUp } from '@ui';
 
@@ -10,6 +10,9 @@ const OrdersPage = () => {
                     <StatCard key={index} {...stat} />
                 ))}
             </SlideUp>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+                <DailyOrdersChart />
+            </div>
         </>
     );
 };

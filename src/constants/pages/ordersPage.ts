@@ -26,3 +26,13 @@ export const ORDERS_STAT = [
         color: '#ef4444',
     },
 ];
+
+export const ORDERS_DATA = [
+    { date: '07/01', orders: 48 },
+    { date: '07/02', orders: 42 },
+    { date: '07/03', orders: 49 },
+    { date: '07/04', orders: 62 },
+    { date: '07/05', orders: 55 },
+    { date: '07/06', orders: 52 },
+    { date: '07/07', orders: 62 },
+];
