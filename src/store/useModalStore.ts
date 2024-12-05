@@ -1,4 +1,4 @@
-import { Product, User } from '@constants';
+import { Order, Product, User } from '@constants';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
@@ -6,14 +6,14 @@ import { immer } from 'zustand/middleware/immer';
 type ModalStatus = 'ADD' | 'EDIT' | 'VIEW' | 'CLOSE';
 
 interface ModalState {
-    data?: Product | User | null;
+    data?: Product | User | Order | null;
     active: boolean;
     status: ModalStatus;
 }
 
 interface ModalStore {
     modal: ModalState;
-    openModal: (status: ModalStatus, data?: Product | User) => void;
+    openModal: (status: ModalStatus, data?: Product | User | Order) => void;
     closeModal: () => void;
 }
 

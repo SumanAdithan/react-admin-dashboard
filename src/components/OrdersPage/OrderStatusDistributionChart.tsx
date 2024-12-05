@@ -29,8 +29,8 @@ const OrderStatusDistributionChart = () => {
         <SlideUp
             className='bg-gray-800 bg-opacity-50 shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 '
             initial={25}
-            duration={1.8}
-            delay={1.2}
+            duration={0.5}
+            delay={0.2}
         >
             <h2 className='text-lg font-medium mb-4 text-gray-100'>Order Status Distribution</h2>
             <div className='h-80'>

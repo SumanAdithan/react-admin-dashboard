@@ -5,33 +5,27 @@ interface Options {
 
 interface InputFieldProps {
     value: string | number;
-    setState: (prev: any) => void;
+    setState?: (prev: any) => void;
     data: {
         label: string;
         type: string;
-        key: string;
+        key?: string;
         placeholder?: string;
         options?: Options[];
+        disabled?: boolean;
     };
 }
 
 const InputField = ({ setState, data, value }: InputFieldProps) => {
-    const { label, type, placeholder = '', key, options } = data;
+    const { label, type, placeholder = '', key, options, disabled = false } = data;
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const newValue = type === 'number' ? parseInt(e.target.value) : e.target.value;
-        setState((prev: any) => ({ ...prev, [key]: newValue }));
+        if (setState && key) {
+            setState((prev: any) => ({ ...prev, [key]: newValue }));
+        }
     };
 
-    options ? (
-        <select className='w-full px-4 py-2 bg-gray-700 text-white rounded-md' value={value} onChange={handleChange}>
-            {options.map((option) => (
-                <option key={option.value} value={option.value}>
-                    {option.label}
-                </option>
-            ))}
-        </select>
-    ) : null;
     return (
         <div className='flex flex-col space-y-1'>
             <label className='text-sm text-gray-300'>{label}</label>
@@ -40,6 +34,7 @@ const InputField = ({ setState, data, value }: InputFieldProps) => {
                     className='w-full px-4 py-2 bg-gray-700 text-white rounded-md'
                     value={value}
                     onChange={handleChange}
+                    disabled={disabled}
                 >
                     {options.map((option) => (
                         <option key={option.value} value={option.value}>
@@ -54,6 +49,7 @@ const InputField = ({ setState, data, value }: InputFieldProps) => {
                     placeholder={placeholder}
                     value={value}
                     onChange={handleChange}
+                    disabled={disabled}
                 />
             )}
         </div>

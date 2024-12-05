@@ -1,4 +1,4 @@
-import { DailyOrdersChart, OrderStatusDistributionChart, StatCard } from '@components';
+import { DailyOrdersChart, OrderStatusDistributionChart, OrderTable, StatCard } from '@components';
 import { ORDERS_STAT } from '@constants';
 import { SlideUp } from '@ui';
 
@@ -14,6 +14,7 @@ const OrdersPage = () => {
                 <DailyOrdersChart />
                 <OrderStatusDistributionChart />
             </div>
+            <OrderTable />
         </>
     );
 };

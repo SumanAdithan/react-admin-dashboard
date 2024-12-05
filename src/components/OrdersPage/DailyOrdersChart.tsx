@@ -41,8 +41,8 @@ const DailyOrdersChart = () => {
         <SlideUp
             className='bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700'
             initial={25}
-            delay={0.7}
-            duration={1.3}
+            delay={0.2}
+            duration={0.5}
         >
             <h2 className='text-xl font-medium mb-4 text-gray-100'>Daily Orders</h2>
             <div className='h-80'>
