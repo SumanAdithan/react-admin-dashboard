@@ -36,3 +36,13 @@ export const OVERVIEW_SALES_DATA = [
     { month: 'Jun', sales: 5500 },
     { month: 'Jul', sales: 7000 },
 ];
+
+export const SALES_BY_CATEGORY_DATA = [
+    { name: 'Electronics', value: 400 },
+    { name: 'Clothing', value: 300 },
+    { name: 'Home & Garden', value: 200 },
+    { name: 'Books', value: 100 },
+    { name: 'Others', value: 160 },
+];
+
+export const SALES_BY_CATEGORY_COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088fe'];
