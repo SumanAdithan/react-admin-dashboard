@@ -116,3 +116,13 @@ export const STACKED_BARS = [
     { dataKey: '16-20', fill: '#F59E0B' },
     { dataKey: '20-24', fill: '#6EE7B7' },
 ];
+
+export const USER_DEMOGRAPHIC_DATA = [
+    { name: '18-24', value: 20 },
+    { name: '25-34', value: 30 },
+    { name: '35-44', value: 25 },
+    { name: '45-54', value: 15 },
+    { name: '55+', value: 10 },
+];
+
+export const USER_DEMOGRAPHIC_COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088fe'];

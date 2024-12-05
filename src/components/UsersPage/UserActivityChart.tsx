@@ -30,8 +30,8 @@ const UserActivityChart = () => {
         <SlideUp
             className='bg-gray-800 bg-opacity-50 shadow-lg backdrop-blur-md rounded-xl p-5  border border-gray-700'
             initial={25}
-            duration={0.6}
-            delay={0.5}
+            duration={1.3}
+            delay={0.7}
         >
             <h2 className='text-xl font-medium mb-4 text-gray-100'>User Activity HeatMap</h2>
             <div className='h-80'>

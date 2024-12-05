@@ -15,6 +15,7 @@ export * from './ProductsPage/ProductTable/productColumnConfig';
 // usersPage
 export { default as UserGrowthChart } from './UsersPage/UserGrowthChart';
 export { default as UserActivityChart } from './UsersPage/UserActivityChart';
+export { default as UserDemographicsChart } from './UsersPage/UserDemographicsChart';
 export { default as UserTable } from './UsersPage/UserTable/UserTable';
 export { default as UserTableForm } from './UsersPage/UserTable/UserTableForm';
 export * from './UsersPage/UserTable/userColumnConfig';
