@@ -46,3 +46,13 @@ export const SALES_BY_CATEGORY_DATA = [
 ];
 
 export const SALES_BY_CATEGORY_COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088fe'];
+
+export const DAILY_SALES_TREND_DATA = [
+    { name: 'Mon', sales: 800 },
+    { name: 'Tue', sales: 1250 },
+    { name: 'Wed', sales: 500 },
+    { name: 'Thu', sales: 1000 },
+    { name: 'Fri', sales: 1300 },
+    { name: 'Sat', sales: 1550 },
+    { name: 'Sun', sales: 1150 },
+];
