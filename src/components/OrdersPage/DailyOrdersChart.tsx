@@ -44,7 +44,7 @@ const DailyOrdersChart = () => {
             delay={0.7}
             duration={1.3}
         >
-            <h2 className='text-xl font-medium mb-4 text-gray-100'>User Growth</h2>
+            <h2 className='text-xl font-medium mb-4 text-gray-100'>Daily Orders</h2>
             <div className='h-80'>
                 <CustomLineChart {...lineChartProps} />
             </div>
