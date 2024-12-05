@@ -19,3 +19,9 @@ export { default as UserDemographicsChart } from './UsersPage/UserDemographicsCh
 export { default as UserTable } from './UsersPage/UserTable/UserTable';
 export { default as UserTableForm } from './UsersPage/UserTable/UserTableForm';
 export * from './UsersPage/UserTable/userColumnConfig';
+// ordersPage
+export { default as DailyOrdersChart } from './OrdersPage/DailyOrdersChart';
+export { default as OrderStatusDistributionChart } from './OrdersPage/OrderStatusDistributionChart';
+export { default as OrderTable } from './OrdersPage/OrderTable/OrderTable';
+export { default as OrderTableForm } from './OrdersPage/OrderTable/OrderTableForm';
+export * from './OrdersPage/OrderTable/orderColumnConfig';
