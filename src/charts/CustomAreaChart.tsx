@@ -16,23 +16,19 @@ interface AreaChartProps {
         contentStyle: CSSProperties;
         itemStyle: CSSProperties;
     };
-    area: {
+    areas: {
         type: CurveType;
         stroke: string;
         fill: string;
         fillOpacity: number;
-    };
+        dataKey: string;
+    }[];
     legend: boolean;
 }
 
-const CustomAreaChart = ({ data, strokeDashArray, dataKeys, strokes, tooltip, area, legend }: AreaChartProps) => {
+const CustomAreaChart = ({ data, strokeDashArray, dataKeys, strokes, tooltip, areas, legend }: AreaChartProps) => {
     const { cartesianGridStroke, xAxisStroke, yAxisStroke } = strokes;
     const { active, contentStyle, itemStyle } = tooltip;
-
-    const areaProps = {
-        ...area,
-        dataKey: dataKeys[1],
-    };
 
     return (
         <ResponsiveContainer width={'100%'} height={'100%'}>
@@ -48,7 +44,11 @@ const CustomAreaChart = ({ data, strokeDashArray, dataKeys, strokes, tooltip, ar
                         itemStyle={{ ...itemStyle }}
                     />
                 )}
-                <Area {...areaProps} />
+
+                {areas.map((areaProps, index) => (
+                    <Area key={index} {...areaProps} />
+                ))}
+
                 {legend && <Legend />}
                 <Legend />
             </AreaChart>

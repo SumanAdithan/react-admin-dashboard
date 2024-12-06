@@ -20,12 +20,15 @@ const areaChartProps = {
         },
         itemStyle: { color: '#e5e7eb' },
     },
-    area: {
-        type: 'monotone' as 'monotone',
-        stroke: '#8b5cf6',
-        fill: '#8b5cf6',
-        fillOpacity: 0.3,
-    },
+    areas: [
+        {
+            type: 'monotone' as 'monotone',
+            stroke: '#8b5cf6',
+            fill: '#8b5cf6',
+            fillOpacity: 0.3,
+            dataKey: 'sales',
+        },
+    ],
     legend: false,
 };
 
