@@ -16,3 +16,14 @@ export const ANALYTICS_DATA = [
     { month: 'Jun', revenue: 4500, target: 4800 },
     { month: 'Jul', revenue: 7000, target: 6500 },
 ];
+
+export const CHANNEL_DATA = [
+    { name: 'Organic Search', value: 4500 },
+    { name: 'Paid Search', value: 3000 },
+    { name: 'Direct', value: 2500 },
+    { name: 'Social Media', value: 2700 },
+    { name: 'Referral', value: 1800 },
+    { name: 'Email', value: 2400 },
+];
+
+export const CHANNEL_COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088FE', '#00C49F'];

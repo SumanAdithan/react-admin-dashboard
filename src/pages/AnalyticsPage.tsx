@@ -1,4 +1,4 @@
-import { RevenueVsTargetChart, StatCard } from '@components';
+import { ChannelPerformanceChart, RevenueVsTargetChart, StatCard } from '@components';
 import { ANALYTICS_STAT } from '@constants';
 import { SlideUp } from '@ui';
 
@@ -11,6 +11,9 @@ const AnalyticsPage = () => {
                 ))}
             </SlideUp>
             <RevenueVsTargetChart />
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mb-7'>
+                <ChannelPerformanceChart />
+            </div>
         </>
     );
 };
