@@ -10,7 +10,7 @@ interface CustomBarChartProps {
         xAxisStroke: string;
         yAxisStroke: string;
     };
-    bar: {
+    bar?: {
         fill: string;
     };
     tooltip: {
@@ -19,6 +19,10 @@ interface CustomBarChartProps {
         itemStyle: CSSProperties;
     };
     colors: string[];
+    bars?: {
+        dataKey: string;
+        fill: string;
+    }[];
     legend: boolean;
 }
 
@@ -31,6 +35,7 @@ const CustomBarChart = ({
     tooltip,
     colors,
     legend,
+    bars,
 }: CustomBarChartProps) => {
     const { cartesianGridStroke, xAxisStroke, yAxisStroke } = strokes;
     const { active, contentStyle, itemStyle } = tooltip;
@@ -45,11 +50,16 @@ const CustomBarChart = ({
                 <CartesianGrid strokeDasharray={strokeDashArray} stroke={cartesianGridStroke} />
                 <XAxis dataKey={dataKeys[0]} stroke={xAxisStroke} />
                 <YAxis stroke={yAxisStroke} />
-                <Bar {...barProps}>
-                    {data.map((_, index) => (
-                        <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                    ))}
-                </Bar>
+                {bars ? (
+                    bars.map((bar) => <Bar dataKey={bar.dataKey} fill={bar.fill} />)
+                ) : (
+                    <Bar {...barProps}>
+                        {data.map((_, index) => (
+                            <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                        ))}
+                    </Bar>
+                )}
+
                 {active && (
                     <Tooltip
                         contentStyle={{

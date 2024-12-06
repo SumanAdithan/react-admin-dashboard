@@ -27,3 +27,11 @@ export const CHANNEL_DATA = [
 ];
 
 export const CHANNEL_COLORS = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088FE', '#00C49F'];
+
+export const PRODUCT_PERFORMANCE_DATA = [
+    { name: 'Product A', sales: 4000, revenue: 2650, profit: 2200 },
+    { name: 'Product B', sales: 3000, revenue: 1398, profit: 2210 },
+    { name: 'Product C', sales: 2000, revenue: 5500, profit: 2290 },
+    { name: 'Product D', sales: 2780, revenue: 3908, profit: 2000 },
+    { name: 'Product E', sales: 1890, revenue: 4800, profit: 2181 },
+];
