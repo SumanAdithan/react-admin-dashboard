@@ -35,4 +35,4 @@ export { default as ChannelPerformanceChart } from './AnalyticsPage/ChannelPerfo
 export { default as CustomerSegmentationChart } from './AnalyticsPage/CustomerSegmentationChart';
 export { default as ProductPerformanceChart } from './AnalyticsPage/ProductPerformanceChart';
 export { default as RevenueVsTargetChart } from './AnalyticsPage/RevenueVsTargetChart';
-export { default as UserRetensionCharts } from './AnalyticsPage/UserRetensionCharts';
+export { default as UserRetensionChart } from './AnalyticsPage/UserRetensionChart';
