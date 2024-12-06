@@ -31,7 +31,7 @@ const barChartProps = {
 const ProductPerformanceChart = () => {
     return (
         <SlideUp
-            className='bg-gray-800 bg-opacity-50 shadow-lg backdrop-blur-md rounded-xl p-5  border border-gray-700'
+            className='bg-gray-800 bg-opacity-50 shadow-lg backdrop-blur-md rounded-xl p-5  border border-gray-700 mt-7'
             initial={25}
             duration={0.7}
             delay={0.7}
