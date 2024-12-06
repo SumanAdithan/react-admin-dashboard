@@ -1,5 +1,6 @@
 import {
     ChannelPerformanceChart,
+    CustomerSegmentationChart,
     ProductPerformanceChart,
     RevenueVsTargetChart,
     StatCard,
@@ -21,6 +22,7 @@ const AnalyticsPage = () => {
                 <ChannelPerformanceChart />
                 <ProductPerformanceChart />
                 <UserRetensionChart />
+                <CustomerSegmentationChart />
             </div>
         </>
     );
