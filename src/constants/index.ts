@@ -6,3 +6,4 @@ export * from './pages/usersPage';
 export * from './pages/ordersPage';
 export * from './pages/salesPage';
 export * from './pages/AnalyticsPage';
+export * from './pages/settingsPage';

@@ -36,3 +36,9 @@ export { default as CustomerSegmentationChart } from './AnalyticsPage/CustomerSe
 export { default as ProductPerformanceChart } from './AnalyticsPage/ProductPerformanceChart';
 export { default as RevenueVsTargetChart } from './AnalyticsPage/RevenueVsTargetChart';
 export { default as UserRetensionChart } from './AnalyticsPage/UserRetensionChart';
+// settingsPage
+export { default as ConnectedAccounts } from './SettingsPage/ConnectedAccounts';
+export { default as DangerZone } from './SettingsPage/DangerZone';
+export { default as Notification } from './SettingsPage/Notification';
+export { default as Profile } from './SettingsPage/Profile';
+export { default as Security } from './SettingsPage/Security';
