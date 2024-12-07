@@ -1,10 +1,11 @@
-import { Notification, Profile } from '@components';
+import { Notification, Profile, Security } from '@components';
 
 const SettingsPage = () => {
     return (
         <>
             <Profile />
             <Notification />
+            <Security />
         </>
     );
 };
