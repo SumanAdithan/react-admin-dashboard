@@ -14,7 +14,8 @@
             "@charts": ["charts"],
             "@hooks": ["hooks"],
             "@store": ["store"],
-            "@utils": ["utils"]
+            "@utils": ["utils"],
+            "@assets/*": ["assets/*"]
         }
     }
 }

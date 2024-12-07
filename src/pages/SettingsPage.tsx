@@ -1,5 +1,11 @@
+import { Profile } from '@components';
+
 const SettingsPage = () => {
-    return <div>SettingsPage</div>;
+    return (
+        <>
+            <Profile />
+        </>
+    );
 };
 
 export default SettingsPage;
