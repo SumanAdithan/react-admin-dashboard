@@ -1,4 +1,4 @@
-import { DollarSign, Eye, ShoppingBag, Users } from 'lucide-react';
+import { DollarSign, Eye, ShoppingBag, TrendingUp, Users } from 'lucide-react';
 
 export const ANALYTICS_STAT = [
     { name: 'Revenue', value: '$1,234,567', change: 12.5, icon: DollarSign },
@@ -54,4 +54,27 @@ export const CUSTOMER_SEGMENTATION_DATA = [
     { subject: 'Spend', A: 99, B: 100, fullMark: 150 },
     { subject: 'Frequency', A: 85, B: 90, fullMark: 150 },
     { subject: 'Recency', A: 65, B: 85, fullMark: 150 },
+];
+
+export const INSIGHTS = [
+    {
+        icon: TrendingUp,
+        color: 'text-green-500',
+        insight: 'Revenue is up 15% compared to last month, driven primarily by a successful email campaign.',
+    },
+    {
+        icon: Users,
+        color: 'text-blue-500',
+        insight: 'Customer retention has improved by 8% following the launch of the new loyalty program.',
+    },
+    {
+        icon: ShoppingBag,
+        color: 'text-purple-500',
+        insight: 'Product category "Electronics" shows the highest growth potential based on recent market trends.',
+    },
+    {
+        icon: DollarSign,
+        color: 'text-yellow-500',
+        insight: 'Optimizing pricing strategy could potentially increase overall profit margins by 5-7%.',
+    },
 ];

@@ -1,4 +1,5 @@
 import {
+    AiPoweredInsights,
     ChannelPerformanceChart,
     CustomerSegmentationChart,
     ProductPerformanceChart,
@@ -24,6 +25,7 @@ const AnalyticsPage = () => {
                 <UserRetensionChart />
                 <CustomerSegmentationChart />
             </div>
+            <AiPoweredInsights />
         </>
     );
 };
