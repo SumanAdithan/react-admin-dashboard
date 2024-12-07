@@ -1,9 +1,10 @@
-import { Profile } from '@components';
+import { Notification, Profile } from '@components';
 
 const SettingsPage = () => {
     return (
         <>
             <Profile />
+            <Notification />
         </>
     );
 };

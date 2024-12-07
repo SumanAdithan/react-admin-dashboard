@@ -43,3 +43,4 @@ export { default as Notification } from './SettingsPage/Notification';
 export { default as Profile } from './SettingsPage/Profile';
 export { default as Security } from './SettingsPage/Security';
 export { default as SettingsSection } from './SettingsPage/SettingsSection';
+export { default as ToggleSwitch } from './SettingsPage/ToggleSwitch';
