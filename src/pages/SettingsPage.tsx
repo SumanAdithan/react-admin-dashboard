@@ -1,4 +1,4 @@
-import { Notification, Profile, Security } from '@components';
+import { ConnectedAccounts, Notification, Profile, Security } from '@components';
 
 const SettingsPage = () => {
     return (
@@ -6,6 +6,7 @@ const SettingsPage = () => {
             <Profile />
             <Notification />
             <Security />
+            <ConnectedAccounts />
         </>
     );
 };
