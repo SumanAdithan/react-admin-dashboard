@@ -1,4 +1,4 @@
-import AdminRoutes from '@routes';
+import { AdminRoutes } from '@routes';
 
 const App = () => {
     return <AdminRoutes />;
