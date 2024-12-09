@@ -2,8 +2,8 @@ export const HEADER_TITLE: Record<string, string> = {
     '/': 'Overview',
     '/products': 'Products',
     '/users': 'Users',
-    '/sales': 'Sales',
+    '/sales': 'Sales Dashboard',
     '/orders': 'Orders',
-    '/analytics': 'Analytics',
+    '/analytics': 'Analytics Dashboard',
     '/settings': 'Settings',
 };
