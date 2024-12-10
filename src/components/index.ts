@@ -1,8 +1,8 @@
 // common
-export { default as StatCard } from './common/Card/StatCard';
-export { default as InputField } from './common/Input/InputField';
-export { default as PageinationControls } from './common/Table/PageinationControls';
-export { default as RenderTable } from './common/Table/RenderTable';
+export { default as StatCard } from './_common_/Card/StatCard';
+export { default as InputField } from './_common_/Input/InputField';
+export { default as PageinationControls } from './_common_/Table/PageinationControls';
+export { default as RenderTable } from './_common_/Table/RenderTable';
 // overviewPage
 export { default as SalesOverviewChart } from './OverviewPage/SalesOverviewChart';
 export { default as CategoryDistributionChart } from './OverviewPage/CategoryDistributionChart';
