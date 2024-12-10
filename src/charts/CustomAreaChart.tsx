@@ -31,7 +31,7 @@ const CustomAreaChart = ({ data, strokeDashArray, dataKeys, strokes, tooltip, ar
     const { active, contentStyle, itemStyle } = tooltip;
 
     return (
-        <ResponsiveContainer width={'100%'} height={'100%'}>
+        <ResponsiveContainer width={'100%'} height={'100%'} minWidth={'350px'}>
             <AreaChart data={data}>
                 <CartesianGrid strokeDasharray={strokeDashArray} stroke={cartesianGridStroke} />
                 <XAxis dataKey={dataKeys[0]} stroke={xAxisStroke} />

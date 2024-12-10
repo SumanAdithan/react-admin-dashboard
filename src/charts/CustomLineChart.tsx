@@ -43,7 +43,7 @@ const CustomLineChart = ({ data, strokeDashArray, dataKeys, strokes, tooltip, li
     };
 
     return (
-        <ResponsiveContainer width={'100%'} height={'100%'}>
+        <ResponsiveContainer width={'100%'} height={'100%'} minWidth={'350px'}>
             <LineChart data={data}>
                 <CartesianGrid strokeDasharray={strokeDashArray} stroke={cartesianGridStroke} />
                 <XAxis dataKey={dataKeys[0]} stroke={xAxisStroke} />

@@ -45,7 +45,7 @@ const CustomBarChart = ({
     };
 
     return (
-        <ResponsiveContainer width={'100%'} height={'100%'}>
+        <ResponsiveContainer width={'100%'} height={'100%'} minWidth={'350px'}>
             <BarChart data={data}>
                 <CartesianGrid strokeDasharray={strokeDashArray} stroke={cartesianGridStroke} />
                 <XAxis dataKey={dataKeys[0]} stroke={xAxisStroke} />

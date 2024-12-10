@@ -38,7 +38,7 @@ const CustomStackedBarChart = ({
     const { cartesianGridStroke, xAxisStroke, yAxisStroke } = strokes;
     const { active, contentStyle, itemStyle } = tooltip;
     return (
-        <ResponsiveContainer width={'100%'} height={'100%'}>
+        <ResponsiveContainer width={'100%'} height={'100%'} minWidth={'350px'}>
             <BarChart data={data}>
                 <CartesianGrid strokeDasharray={strokeDashArray} stroke={cartesianGridStroke} />
                 <XAxis dataKey={dataKey} stroke={xAxisStroke} />

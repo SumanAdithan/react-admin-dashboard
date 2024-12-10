@@ -35,7 +35,7 @@ const SalesChannelChart = () => {
             delay={0.5}
         >
             <h2 className='text-lg font-medium mb-4 text-gray-100'>Sales By Channel</h2>
-            <div className='h-80'>
+            <div className='h-80 overflow-auto'>
                 <CustomBarChart {...barChartProps} />
             </div>
         </SlideUp>

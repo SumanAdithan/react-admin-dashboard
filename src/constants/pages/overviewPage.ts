@@ -1,13 +1,6 @@
-import { Zap, Users, ShoppingBag, BarChart2, LucideIcon } from 'lucide-react';
+import { Zap, Users, ShoppingBag, BarChart2 } from 'lucide-react';
 
-export interface StatCard {
-    name: string;
-    icon: LucideIcon;
-    value: string;
-    color: string;
-}
-
-export const OVERVIEW_STAT: StatCard[] = [
+export const OVERVIEW_STAT = [
     {
         name: 'Total Sales',
         icon: Zap,
@@ -34,12 +27,7 @@ export const OVERVIEW_STAT: StatCard[] = [
     },
 ];
 
-interface SalesData {
-    name: string;
-    sales: number;
-}
-
-export const SALES_DATA: SalesData[] = [
+export const SALES_DATA = [
     { name: 'Jul', sales: 4200 },
     { name: 'Aug', sales: 3800 },
     { name: 'Sep', sales: 5100 },
@@ -54,12 +42,7 @@ export const SALES_DATA: SalesData[] = [
     { name: 'Jun', sales: 7500 },
 ];
 
-interface CategoryData {
-    name: string;
-    value: number;
-}
-
-export const CATEGORY_DATA: CategoryData[] = [
+export const CATEGORY_DATA = [
     { name: 'Electronics', value: 4500 },
     { name: 'Clothing', value: 3200 },
     { name: 'Home & Garden', value: 2800 },
@@ -67,18 +50,13 @@ export const CATEGORY_DATA: CategoryData[] = [
     { name: 'Sports & Outdoors', value: 1900 },
 ];
 
-export const CATEGORY_DATA_COLORS: string[] = ['#6366f1', '#8B5CF6', '#ec4899', '#10b981', '#f59e0b'];
+export const CATEGORY_DATA_COLORS = ['#6366f1', '#8B5CF6', '#ec4899', '#10b981', '#f59e0b'];
 
-interface SalesChannelData {
-    name: string;
-    value: number;
-}
-
-export const SALES_CHANNEL_DATA: SalesChannelData[] = [
+export const SALES_CHANNEL_DATA = [
     { name: 'Website', value: 45600 },
     { name: 'Mobile App', value: 38200 },
     { name: 'Marketplace', value: 29800 },
     { name: 'Social Media', value: 18700 },
 ];
 
-export const SALES_CHANNEL_DATA_COLORS: string[] = ['#6366F1', '#8B5CF6', '#EC4899', '#10B981', '#F59E0B'];
+export const SALES_CHANNEL_DATA_COLORS = ['#6366F1', '#8B5CF6', '#EC4899', '#10B981', '#F59E0B'];

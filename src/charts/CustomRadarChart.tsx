@@ -55,7 +55,7 @@ const CustomRadarChart = ({
     const { polarGrid, polarAngleAxis, polarRadiusAxis } = strokes;
 
     return (
-        <ResponsiveContainer width='100%' height='100%'>
+        <ResponsiveContainer width='100%' height='100%' minWidth={'350px'}>
             <RadarChart data={data} cx={cx} cy={cy} outerRadius={outerRadius}>
                 <PolarGrid stroke={polarGrid} />
                 <PolarAngleAxis dataKey={dataKey} stroke={polarAngleAxis} />

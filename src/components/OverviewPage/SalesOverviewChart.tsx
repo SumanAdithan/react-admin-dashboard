@@ -45,7 +45,7 @@ const SalesOverviewChart = () => {
             delay={0.2}
         >
             <h2 className='text-lg font-medium mb-4 text-gray-100'>Sales Overview</h2>
-            <div className='h-80'>
+            <div className='h-80 overflow-auto '>
                 <CustomLineChart {...lineChartProps} />
             </div>
         </SlideUp>
