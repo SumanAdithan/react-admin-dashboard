@@ -4,25 +4,25 @@ export const Users_STAT = [
     {
         name: 'Total Users',
         icon: UserIcon,
-        value: '8,74,504',
+        value: '1,150,320',
         color: '#6366f1',
     },
     {
         name: 'New Users Today',
         icon: UserPlus,
-        value: '243',
+        value: '532',
         color: '#10b981',
     },
     {
         name: 'Active Users',
         icon: UserCheck,
-        value: '23,091',
+        value: '35,876',
         color: '#f59e0b',
     },
     {
         name: 'Churn Rate',
         icon: UserX,
-        value: '2.3%',
+        value: '1.8%',
         color: '#ef4444',
     },
 ];
@@ -36,21 +36,21 @@ export interface User {
 }
 
 export const USER_TABLE_DATA = [
-    { id: '1', name: 'Mudassar', email: 'mudassar@gmail.com', role: 'Admin', status: 'Active' },
-    { id: '2', name: 'Ustad g', email: 'john.smith@gmail.com', role: 'Customer', status: 'Active' },
-    { id: '3', name: 'Wahab', email: 'wahab.noor@gmail.com', role: 'Customer', status: 'Inactive' },
-    { id: '4', name: 'Danish', email: 'danish.joe@gmail.com', role: 'Moderator', status: 'Active' },
-    { id: '5', name: 'Usama', email: 'usama.glasses@gmail.com', role: 'Customer', status: 'Active' },
-    { id: '6', name: 'Ayesha', email: 'ayesha.khan@gmail.com', role: 'Admin', status: 'Inactive' },
-    { id: '7', name: 'Hassan', email: 'hassan.ali@gmail.com', role: 'Customer', status: 'Active' },
-    { id: '8', name: 'Sarah', email: 'sarah.jones@gmail.com', role: 'Admin', status: 'Active' },
-    { id: '9', name: 'Ali', email: 'ali.baba@gmail.com', role: 'Customer', status: 'Inactive' },
-    { id: '10', name: 'Fahad', email: 'fahad.king@gmail.com', role: 'Moderator', status: 'Active' },
-    { id: '11', name: 'Zainab', email: 'zainab.queen@gmail.com', role: 'Customer', status: 'Active' },
-    { id: '12', name: 'Bilal', email: 'bilal.smart@gmail.com', role: 'Customer', status: 'Inactive' },
-    { id: '13', name: 'Rizwan', email: 'rizwan.shah@gmail.com', role: 'Moderator', status: 'Active' },
-    { id: '14', name: 'Kiran', email: 'kiran.doe@gmail.com', role: 'Customer', status: 'Inactive' },
-    { id: '15', name: 'Yasir', email: 'yasir.ace@gmail.com', role: 'Admin', status: 'Active' },
+    { id: '1', name: 'John Doe', email: 'john.doe@example.com', role: 'Admin', status: 'Active' },
+    { id: '2', name: 'Jane Smith', email: 'jane.smith@example.com', role: 'Customer', status: 'Active' },
+    { id: '3', name: 'Robert Brown', email: 'robert.brown@example.com', role: 'Customer', status: 'Inactive' },
+    { id: '4', name: 'Emily Davis', email: 'emily.davis@example.com', role: 'Moderator', status: 'Active' },
+    { id: '5', name: 'Michael Clark', email: 'michael.clark@example.com', role: 'Customer', status: 'Active' },
+    { id: '6', name: 'Sarah Wilson', email: 'sarah.wilson@example.com', role: 'Admin', status: 'Inactive' },
+    { id: '7', name: 'David Johnson', email: 'david.johnson@example.com', role: 'Customer', status: 'Active' },
+    { id: '8', name: 'Anna Taylor', email: 'anna.taylor@example.com', role: 'Admin', status: 'Active' },
+    { id: '9', name: 'Chris Lee', email: 'chris.lee@example.com', role: 'Customer', status: 'Inactive' },
+    { id: '10', name: 'Steven White', email: 'steven.white@example.com', role: 'Moderator', status: 'Active' },
+    { id: '11', name: 'Olivia King', email: 'olivia.king@example.com', role: 'Customer', status: 'Active' },
+    { id: '12', name: 'James Scott', email: 'james.scott@example.com', role: 'Customer', status: 'Inactive' },
+    { id: '13', name: 'Daniel Harris', email: 'daniel.harris@example.com', role: 'Moderator', status: 'Active' },
+    { id: '14', name: 'Charlotte Miller', email: 'charlotte.miller@example.com', role: 'Customer', status: 'Inactive' },
+    { id: '15', name: 'William Walker', email: 'william.walker@example.com', role: 'Admin', status: 'Active' },
 ];
 
 export const USER_TABLE_INPUT_FIELDS = [
@@ -90,12 +90,12 @@ export const USER_TABLE_INPUT_FIELDS = [
 ];
 
 export const USER_GROWTH_DATA = [
-    { name: 'Aug', users: 800 },
-    { name: 'Sep', users: 1500 },
-    { name: 'Oct', users: 1600 },
-    { name: 'Nov', users: 1950 },
-    { name: 'Dec', users: 3300 },
-    { name: 'Jan', users: 4000 },
+    { month: 'Jan', users: 1000 },
+    { month: 'Feb', users: 1500 },
+    { month: 'Mar', users: 2000 },
+    { month: 'Apr', users: 3000 },
+    { month: 'May', users: 4000 },
+    { month: 'Jun', users: 5000 },
 ];
 
 export const USER_ACTIVITY_DATA = [
