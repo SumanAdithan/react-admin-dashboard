@@ -2,6 +2,7 @@ import { SlideUp } from '@ui';
 import { CATEGORY_DATA, CATEGORY_DATA_COLORS as COLORS } from '@constants';
 import { CustomPieChart } from '@charts';
 import { useEffect, useRef } from 'react';
+import { scrollCenter } from '@utils';
 
 const pieChartProps = {
     data: CATEGORY_DATA,
@@ -27,14 +28,8 @@ const pieChartProps = {
 
 const CategoryDistributionChart = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const centerScroll = () => {
-        if (containerRef.current) {
-            const container = containerRef.current;
-            container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
-        }
-    };
     useEffect(() => {
-        setTimeout(centerScroll, 1500);
+        setTimeout(() => scrollCenter(containerRef), 1500);
     }, []);
 
     return (

@@ -1,7 +1,8 @@
-import { CustomPieChart, CustomRadarChart } from '@charts';
+import { CustomRadarChart } from '@charts';
 import { CUSTOMER_SEGMENTATION_DATA } from '@constants';
 import { SlideUp } from '@ui';
 import { useEffect, useRef } from 'react';
+import { scrollCenter } from '@utils';
 
 const radarChartProps = {
     data: CUSTOMER_SEGMENTATION_DATA,
@@ -33,14 +34,8 @@ const radarChartProps = {
 
 const CustomerSegmentationChart = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const centerScroll = () => {
-        if (containerRef.current) {
-            const container = containerRef.current;
-            container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
-        }
-    };
     useEffect(() => {
-        setTimeout(centerScroll, 1500);
+        setTimeout(() => scrollCenter(containerRef), 1500);
     }, []);
     return (
         <SlideUp

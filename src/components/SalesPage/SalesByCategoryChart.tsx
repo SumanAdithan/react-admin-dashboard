@@ -1,6 +1,7 @@
 import { CustomPieChart } from '@charts';
 import { SALES_BY_CATEGORY_DATA, SALES_BY_CATEGORY_COLORS as COLORS } from '@constants';
 import { SlideUp } from '@ui';
+import { scrollCenter } from '@utils';
 import { useEffect, useRef } from 'react';
 
 const pieChartProps = {
@@ -27,14 +28,8 @@ const pieChartProps = {
 
 const SalesByCategoryChart = () => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const centerScroll = () => {
-        if (containerRef.current) {
-            const container = containerRef.current;
-            container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
-        }
-    };
     useEffect(() => {
-        setTimeout(centerScroll, 1500);
+        setTimeout(() => scrollCenter(containerRef), 1500);
     }, []);
     return (
         <SlideUp

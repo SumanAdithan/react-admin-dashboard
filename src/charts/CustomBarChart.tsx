@@ -51,7 +51,7 @@ const CustomBarChart = ({
                 <XAxis dataKey={dataKeys[0]} stroke={xAxisStroke} />
                 <YAxis stroke={yAxisStroke} />
                 {bars ? (
-                    bars.map((bar) => <Bar dataKey={bar.dataKey} fill={bar.fill} />)
+                    bars.map((bar, index) => <Bar key={index} dataKey={bar.dataKey} fill={bar.fill} />)
                 ) : (
                     <Bar {...barProps}>
                         {data.map((_, index) => (

@@ -60,8 +60,8 @@ const CustomRadarChart = ({
                 <PolarGrid stroke={polarGrid} />
                 <PolarAngleAxis dataKey={dataKey} stroke={polarAngleAxis} />
                 <PolarRadiusAxis angle={angle} domain={domain} stroke={polarRadiusAxis} />
-                {radar.map((data) => (
-                    <Radar {...data} />
+                {radar.map((data, index) => (
+                    <Radar key={index} {...data} />
                 ))}
                 {active && (
                     <Tooltip
