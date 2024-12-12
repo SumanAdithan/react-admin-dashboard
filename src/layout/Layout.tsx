@@ -1,4 +1,5 @@
 import { Main, Header, Sidebar } from '@layout';
+import { ScrollToTop } from '@ui';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
@@ -10,12 +11,12 @@ const Layout = () => {
                 <div className='absolute inset-0 backdrop-blur-3xl' />
             </div>
             <Sidebar />
-            <div className='flex-1 z-20 overflow-auto relative bg-gray-900'>
+            <ScrollToTop className='flex-1 z-20 overflow-auto relative bg-gray-900'>
                 <Header />
                 <Main>
                     <Outlet />
                 </Main>
-            </div>
+            </ScrollToTop>
         </div>
     );
 };
