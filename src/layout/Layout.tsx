@@ -11,7 +11,7 @@ const Layout = () => {
                 <div className='absolute inset-0 backdrop-blur-3xl' />
             </div>
             <Sidebar />
-            <ScrollToTop className='flex-1 z-20 overflow-auto relative bg-gray-900'>
+            <ScrollToTop className='flex-1 z-20 overflow-auto relative bg-gray-900 scroll-smooth'>
                 <Header />
                 <Main>
                     <Outlet />

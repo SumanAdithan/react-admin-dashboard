@@ -11,10 +11,7 @@ const ScrollToTop = ({ className, children }: ScrollToTopProps) => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-            });
+            scrollContainerRef.current.scroll(0, 0);
         }
     }, [pathname]);
 
