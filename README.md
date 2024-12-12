@@ -43,8 +43,8 @@ To get started with Taskify, follow these steps:
     ```
 4. Start the development server:
    `bash
-    yarn dev
-    `
+ yarn dev
+ `
    The application will be available at http://localhost:5173/.
 5. Run test cases:
     ```bash
@@ -68,6 +68,10 @@ src
 ├── ui                # Reusable animation components using Framer Motion
 └── utils             # Utility functions and helpers
 ```
+
+## Credits
+
+This project is inspired by react-admin-dashboard, which is open-source and free to use. You can find the original repository [here](https://github.com/burakorkmez/react-admin-dashboard).
 
 ## Contributing
 
