@@ -35,7 +35,7 @@ const DailySalesTrendChart = () => {
             delay={0.7}
         >
             <h2 className='text-lg font-medium mb-4 text-gray-100'>Daily Sales Trend</h2>
-            <div className='h-80'>
+            <div className='h-80 overflow-auto'>
                 <CustomBarChart {...barChartProps} />
             </div>
         </SlideUp>

@@ -41,10 +41,10 @@ const OverviewSalesChart = () => {
             duration={0.2}
             delay={0.2}
         >
-            <div className='flex items-center justify-between mb-6'>
+            <div className='flex sm:items-center justify-between mb-6 flex-col sm:flex-row'>
                 <h2 className='text-lg font-medium mb-4 text-gray-100'>Sales Overview</h2>
                 <select
-                    className='bg-gray-700 text-white rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-600'
+                    className='bg-gray-700 w-fit text-white rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-600'
                     value={timeRange}
                     onChange={(e) => setTimeRange(e.target.value)}
                 >
@@ -54,7 +54,7 @@ const OverviewSalesChart = () => {
                     <option>This Year</option>
                 </select>
             </div>
-            <div className='h-80 w-full'>
+            <div className='h-80 w-full overflow-auto'>
                 <CustomAreaChart {...areaChartProps} />
             </div>
         </SlideUp>

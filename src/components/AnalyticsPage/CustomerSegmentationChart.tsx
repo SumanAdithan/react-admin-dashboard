@@ -1,6 +1,7 @@
 import { CustomPieChart, CustomRadarChart } from '@charts';
 import { CUSTOMER_SEGMENTATION_DATA } from '@constants';
 import { SlideUp } from '@ui';
+import { useEffect, useRef } from 'react';
 
 const radarChartProps = {
     data: CUSTOMER_SEGMENTATION_DATA,
@@ -31,6 +32,16 @@ const radarChartProps = {
 };
 
 const CustomerSegmentationChart = () => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const centerScroll = () => {
+        if (containerRef.current) {
+            const container = containerRef.current;
+            container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
+        }
+    };
+    useEffect(() => {
+        setTimeout(centerScroll, 1500);
+    }, []);
     return (
         <SlideUp
             className='bg-gray-800 bg-opacity-50 shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 '
@@ -39,7 +50,7 @@ const CustomerSegmentationChart = () => {
             delay={1}
         >
             <h2 className='text-lg font-medium mb-4 text-gray-100'>Customer Segmentation</h2>
-            <div className='h-80'>
+            <div ref={containerRef} className='h-80 overflow-auto'>
                 <CustomRadarChart {...radarChartProps} />
             </div>
         </SlideUp>

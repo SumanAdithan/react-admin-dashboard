@@ -1,6 +1,7 @@
 import { CustomPieChart } from '@charts';
 import { CHANNEL_DATA, SALES_CHANNEL_DATA_COLORS as COLORS } from '@constants';
 import { SlideUp } from '@ui';
+import { useEffect, useRef } from 'react';
 
 const pieChartProps = {
     data: CHANNEL_DATA,
@@ -25,6 +26,16 @@ const pieChartProps = {
 };
 
 const ChannelPerformanceChart = () => {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const centerScroll = () => {
+        if (containerRef.current) {
+            const container = containerRef.current;
+            container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
+        }
+    };
+    useEffect(() => {
+        setTimeout(centerScroll, 1500);
+    }, []);
     return (
         <SlideUp
             className='bg-gray-800 bg-opacity-50 shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 mt-7'
@@ -33,7 +44,7 @@ const ChannelPerformanceChart = () => {
             delay={1}
         >
             <h2 className='text-lg font-medium mb-4 text-gray-100'>Channel Performance</h2>
-            <div className='h-80'>
+            <div ref={containerRef} className='h-80 overflow-auto'>
                 <CustomPieChart {...pieChartProps} />
             </div>
         </SlideUp>

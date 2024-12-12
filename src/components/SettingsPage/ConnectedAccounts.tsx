@@ -27,7 +27,7 @@ const ConnectedAccounts = () => {
     return (
         <SettingsSection icon={HelpCircle} title={'Connected Accounts'}>
             {connectedAccounts.map((account) => (
-                <div key={account.id} className='flex Accounts-center justify-between py-3'>
+                <div key={account.id} className='flex sm:items-center justify-between py-3 flex-col sm:flex-row'>
                     <div className='flex gap-1'>
                         <img src={account.icon} alt='Social Icon' className='size-7 rounded-full object-cover mr-2' />
                         <span className='text-gray-300'>{account.name}</span>

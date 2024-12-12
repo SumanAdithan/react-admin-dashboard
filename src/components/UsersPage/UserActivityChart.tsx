@@ -34,7 +34,7 @@ const UserActivityChart = () => {
             delay={0.7}
         >
             <h2 className='text-xl font-medium mb-4 text-gray-100'>User Activity HeatMap</h2>
-            <div className='h-80'>
+            <div className='h-80 overflow-auto'>
                 <CustomStackedBarChart {...stackedBarChartProps} />
             </div>
         </SlideUp>

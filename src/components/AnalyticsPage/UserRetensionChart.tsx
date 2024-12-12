@@ -36,7 +36,7 @@ const UserRetensionCharts = () => {
             duration={0.5}
         >
             <h2 className='text-xl font-medium mb-4 text-gray-100'>User Retention</h2>
-            <div className='h-80'>
+            <div className='h-80 overflow-auto'>
                 <CustomLineChart {...lineChartProps} />
             </div>
         </SlideUp>

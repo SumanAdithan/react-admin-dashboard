@@ -34,7 +34,7 @@ const CategoryDistributionChart = () => {
         }
     };
     useEffect(() => {
-        setTimeout(centerScroll, 1000);
+        setTimeout(centerScroll, 1500);
     }, []);
 
     return (
