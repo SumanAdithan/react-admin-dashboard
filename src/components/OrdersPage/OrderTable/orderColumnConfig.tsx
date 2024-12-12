@@ -1,7 +1,7 @@
-import { Order, User } from '@constants';
-import { useModalStore, useUserStore } from '@store';
+import { Order } from '@constants';
+import { useModalStore } from '@store';
 import { createColumnHelper } from '@tanstack/react-table';
-import { Edit, Eye, Trash2 } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const columnHelper = createColumnHelper<Order>();
 

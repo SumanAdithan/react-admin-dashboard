@@ -1,7 +1,7 @@
 import { useTableConfig } from '@hooks';
 import { useModalStore, useOrderStore } from '@store';
 import { useState } from 'react';
-import { orderColumns as columns, OrderTableForm, PageinationControls, RenderTable, UserTableForm } from '@components';
+import { orderColumns as columns, OrderTableForm, PageinationControls, RenderTable } from '@components';
 import { SlideUp } from '@ui';
 import { Search } from 'lucide-react';
 

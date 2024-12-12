@@ -21,14 +21,10 @@ const ProductTableForm = () => {
     const [initialProduct, setInitialProduct] = useState<Product | null>(null);
 
     useEffect(() => {
-        let isMounted = true;
         if (modal.status === 'EDIT' && modal.data) {
             setProduct(modal.data as Product);
             setInitialProduct(modal.data as Product);
         }
-        return () => {
-            isMounted = false;
-        };
     }, [modal.active]);
 
     const saveData = () => {

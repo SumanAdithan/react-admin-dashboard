@@ -1,4 +1,4 @@
-import { Product, User } from '@constants';
+import { User } from '@constants';
 import { useModalStore, useUserStore } from '@store';
 import { ScaleIn } from '@ui';
 import { getChangedObjData } from '@utils';
@@ -21,14 +21,10 @@ const UserTableForm = () => {
     const [initialUser, setInitialUser] = useState<User | null>(null);
 
     useEffect(() => {
-        let isMounted = true;
         if (modal.status === 'EDIT' && modal.data) {
             setUser(modal.data as User);
             setInitialUser(modal.data as User);
         }
-        return () => {
-            isMounted = false;
-        };
     }, [modal.active]);
 
     const saveData = () => {

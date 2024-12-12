@@ -1,4 +1,4 @@
-import { CustomBarChart, CustomStackedBarChart } from '@charts';
+import { CustomStackedBarChart } from '@charts';
 import { USER_ACTIVITY_DATA, STACKED_BARS } from '@constants';
 import { SlideUp } from '@ui';
 

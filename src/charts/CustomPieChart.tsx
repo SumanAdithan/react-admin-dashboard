@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { Cell, Label, LabelList, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { Cell, LabelList, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 interface CustomPieChartProps {
     data: { [key: string]: number | string }[];

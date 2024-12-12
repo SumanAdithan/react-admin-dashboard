@@ -1,6 +1,6 @@
 import { SlideUp } from '@ui';
 import { LucideIcon } from 'lucide-react';
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 interface SettingsSection {
     icon: LucideIcon;
