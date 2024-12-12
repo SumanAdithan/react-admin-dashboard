@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { Cell, Label, LabelList, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
 interface CustomPieChartProps {
     data: { [key: string]: number | string }[];
@@ -29,6 +29,7 @@ const CustomPieChart = ({ data, pie, dataKeys, colors, tooltip, legend }: Custom
 
     const pieProps = {
         ...pie,
+        labelLine: true,
         data: data,
         dataKey: dataKeys[1],
         label: ({ name, percent }: PieLabelProps) => `${name} ${(percent * 100).toFixed(0)}%`,
@@ -41,6 +42,13 @@ const CustomPieChart = ({ data, pie, dataKeys, colors, tooltip, legend }: Custom
                     {data.map((_, index) => (
                         <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                     ))}
+                    <LabelList
+                        dataKey={dataKeys[1]}
+                        style={{
+                            fill: 'white',
+                            fontSize: '12px',
+                        }}
+                    />
                 </Pie>
                 {active && (
                     <Tooltip
