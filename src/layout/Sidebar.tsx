@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
 import { CollapsibleSidebar } from '@ui';
 import { SIDEBAR_ITEMS } from '@constants';
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -19,10 +19,14 @@ const Sidebar = () => {
         return (
             <nav className='mt-8 grow'>
                 {SIDEBAR_ITEMS.map((item) => (
-                    <Link
+                    <NavLink
                         key={item.href}
                         to={item.href}
-                        className='flex items-center font-medium p-4 mb-2 text-sm rounded-lg hover:bg-gray-700 transition-colors duration-300'
+                        className={({ isActive }) =>
+                            `flex items-center font-medium p-4 mb-2 text-sm rounded-lg transition-colors duration-300 ${
+                                isActive ? 'bg-gray-700 text-white' : 'hover:bg-gray-700 hover:text-white'
+                            }`
+                        }
                         aria-label={`Navigate to ${item.href}`}
                     >
                         <item.icon size={20} style={{ color: item.color, minWidth: '20px' }} />
@@ -39,7 +43,7 @@ const Sidebar = () => {
                                 </motion.span>
                             )}
                         </AnimatePresence>
-                    </Link>
+                    </NavLink>
                 ))}
             </nav>
         );
